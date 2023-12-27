@@ -84,7 +84,7 @@ func ParseJSON(tokens []token.Token) {
 		case token.OPEN_BRACES:
 			valid, i = objectParser(tokens, i+1)
 		case token.LEFT_BRACKET:
-			valid, i = objectParser(tokens, i+1)
+			valid, i = arrayParser(tokens, i+1)
 		case token.COMMA:
 			i++
 		default:
